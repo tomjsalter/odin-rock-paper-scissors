@@ -8,20 +8,37 @@
   </head>
   <body>
     <script>
-    
-//computerSelection function**
-//Randomly return either 'Rock', 'Paper' or 'Scissors'
 
-// - create computerPlay function
+      /* computerPlay function */
+      function computerPlay() {
+        let numberGenerator;
+        let maxNumber = 3;
+        numberGenerator = Math.floor(Math.random() * maxNumber);
+        console.log(numberGenerator);
+
+        if (numberGenerator === 0) {
+          return "Rock";
+        } else if (numberGenerator === 1) {
+          return "Paper";
+        } else if (numberGenerator === 2) {
+          return "Scissors";
+        }
+      }
+
+      /* playerSelection function */
+      // create playerSelection function
+      function playerSelection()
+
+      // ask player for choice: rock, paper or scissors
 
 
-// - output a number out of 3 potential integers
+      // accept case insensitive strings
 
 
-// - assign either Rock, Paper or Scissors to each of 3 numbers
+      // reject empty strings or cancelled dialogies
 
 
-// - assign choice to function
+      // assign choice to function
 
 
     </script>
