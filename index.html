@@ -8,7 +8,6 @@
   </head>
   <body>
     <script>
-
       /* computerPlay function */
       function computerPlay() {
         let numberGenerator;
@@ -26,22 +25,25 @@
       }
 
       /* playerSelection function */
-      // create playerSelection function
-      function playerSelection()
+      function playerSelection() {
+        let playerInput;
+        playerInput = prompt("Rock, Paper or Scissors?");
+        playerInput = playerInput.toLowerCase();
 
-      // ask player for choice: rock, paper or scissors
-      let playerInput;
-      playerInput = prompt("Rock, Paper or Scissors?");
-
-      // accept case insensitive strings
+        // reject empty strings or cancelled dialogies
+        if (playerInput === "rock") {
+          return "Rock";
+        } else if (playerInput === "paper") {
+          return "Paper";
+        } else if (playerInput === "scissors") {
+          return "Scissors";
+        } else if (playerInput !== "rock" || playerInput !== "paper" || playerInput !== "scissors") {
+          return alert("Please choose either: Rock, Paper or Scissors");
+        } else {
+          return alert("Player choice cancelled.");
+        }
+      }
       
-
-      // reject empty strings or cancelled dialogies
-
-
-      // assign choice to function
-
-
     </script>
   </body>
 </html>
