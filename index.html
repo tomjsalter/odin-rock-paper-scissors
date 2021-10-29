@@ -30,20 +30,67 @@
         playerInput = prompt("Rock, Paper or Scissors?");
         playerInput = playerInput.toLowerCase();
 
-        // reject empty strings or cancelled dialogies
         if (playerInput === "rock") {
           return "Rock";
         } else if (playerInput === "paper") {
           return "Paper";
         } else if (playerInput === "scissors") {
           return "Scissors";
-        } else if (playerInput !== "rock" || playerInput !== "paper" || playerInput !== "scissors") {
+        } else if (
+          playerInput !== "rock" ||
+          playerInput !== "paper" ||
+          playerInput !== "scissors"
+        ) {
           return alert("Please choose either: Rock, Paper or Scissors");
-        } else {
-          return alert("Player choice cancelled.");
         }
       }
-      
+
+      /* playSingleRound function */
+      function playSingleRound(computerPlay, playerSelection) {
+        if (computerPlay === playerSelection) {
+          computerPlay = 1;
+          playerSelection = 1;
+          alert("It's a tie!");
+        } else if (
+          (computerPlay === "Rock" && playerSelection === "Scissors") ||
+          (computerPlay === "Paper" && playerSelection === "Rock") ||
+          (computerPlay === "Scissors" && playerSelection === "Paper")
+        ) {
+          computerPlay = 2;
+          alert("Computer wins!");
+        } else if (
+          (playerSelection === "Rock" && computerPlay === "Scissors") ||
+          (playerSelection === "Paper" && computerPlay === "Rock") ||
+          (playerSelection === "Scissors" && computerPlay === "Paper")
+        ) {
+          playerSelection = 2;
+          alert("Player wins!");
+        }
+      }
+
+      /* compare computerSelection function to playerSelection function */
+      let roundResult;
+      if (computerPlay === playerSelection) {
+        computerPlay = 1;
+        playerSelection = 1;
+        alert("It's a tie!");
+      } else if (
+        (computerPlay === "Rock" && playerSelection === "Scissors") ||
+        (computerPlay === "Paper" && playerSelection === "Rock") ||
+        (computerPlay === "Scissors" && playerSelection === "Paper")
+      ) {
+        computerPlay = 2;
+        alert("Computer wins!");
+      } else if (
+        (playerSelection === "Rock" && computerPlay === "Scissors") ||
+        (playerSelection === "Paper" && computerPlay === "Rock") ||
+        (playerSelection === "Scissors" && computerPlay === "Paper")
+      ) {
+        playerSelection = 2;
+        alert("Player wins!");
+      }
+
+      /* return a string declaring 1 of 3 potential results of comparison for player (win, lose or tie) */
     </script>
   </body>
 </html>
