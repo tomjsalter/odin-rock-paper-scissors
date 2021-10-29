@@ -8,8 +8,14 @@
   </head>
   <body>
     <script>
-      /* computerPlay function */
-      function computerPlay() {
+      
+
+
+      // playSingleRound function 
+      function playSingleRound(computerPlay, playerSelection) {
+        
+        // computerPlay function 
+        function computerPlay() {
         let numberGenerator;
         let maxNumber = 3;
         numberGenerator = Math.floor(Math.random() * maxNumber);
@@ -24,7 +30,8 @@
         }
       }
 
-      /* playerSelection function */
+
+      // playerSelection function
       function playerSelection() {
         let playerInput;
         playerInput = prompt("Rock, Paper or Scissors?");
@@ -45,8 +52,7 @@
         }
       }
 
-      /* playSingleRound function */
-      function playSingleRound(computerPlay, playerSelection) {
+      // compare and declare result
         if (computerPlay === playerSelection) {
           computerPlay = 1;
           playerSelection = 1;
@@ -68,29 +74,9 @@
         }
       }
 
-      /* compare computerSelection function to playerSelection function */
-      let roundResult;
-      if (computerPlay === playerSelection) {
-        computerPlay = 1;
-        playerSelection = 1;
-        alert("It's a tie!");
-      } else if (
-        (computerPlay === "Rock" && playerSelection === "Scissors") ||
-        (computerPlay === "Paper" && playerSelection === "Rock") ||
-        (computerPlay === "Scissors" && playerSelection === "Paper")
-      ) {
-        computerPlay = 2;
-        alert("Computer wins!");
-      } else if (
-        (playerSelection === "Rock" && computerPlay === "Scissors") ||
-        (playerSelection === "Paper" && computerPlay === "Rock") ||
-        (playerSelection === "Scissors" && computerPlay === "Paper")
-      ) {
-        playerSelection = 2;
-        alert("Player wins!");
-      }
 
-      /* return a string declaring 1 of 3 potential results of comparison for player (win, lose or tie) */
+
+
     </script>
   </body>
 </html>
