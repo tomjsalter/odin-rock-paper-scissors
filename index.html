@@ -8,75 +8,70 @@
   </head>
   <body>
     <script>
-      
-
-
-      // playSingleRound function 
-      function playSingleRound(computerPlay, playerSelection) {
-        
-        // computerPlay function 
+      // playSingleRound function
+      function playSingleRound() {
+        // computerPlay function
         function computerPlay() {
-        let numberGenerator;
-        let maxNumber = 3;
-        numberGenerator = Math.floor(Math.random() * maxNumber);
-        console.log(numberGenerator);
+          let numberGenerator;
+          let maxNumber = 3;
+          numberGenerator = Math.floor(Math.random() * maxNumber);
 
-        if (numberGenerator === 0) {
-          return "Rock";
-        } else if (numberGenerator === 1) {
-          return "Paper";
-        } else if (numberGenerator === 2) {
-          return "Scissors";
+          let computerInput;
+          if (numberGenerator === 0) {
+            computerInput = "Rock";
+          } else if (numberGenerator === 1) {
+            computerInput = "Paper";
+          } else if (numberGenerator === 2) {
+            computerInput = "Scissors";
+          }
         }
-      }
 
+        // playerSelection function
+        function playerSelection() {
+          let playerInput;
+          playerInput = prompt("Rock, Paper or Scissors?");
+          playerInput = playerInput.toLowerCase();
 
-      // playerSelection function
-      function playerSelection() {
-        let playerInput;
-        playerInput = prompt("Rock, Paper or Scissors?");
-        playerInput = playerInput.toLowerCase();
-
-        if (playerInput === "rock") {
-          return "Rock";
-        } else if (playerInput === "paper") {
-          return "Paper";
-        } else if (playerInput === "scissors") {
-          return "Scissors";
-        } else if (
-          playerInput !== "rock" ||
-          playerInput !== "paper" ||
-          playerInput !== "scissors"
-        ) {
-          return alert("Please choose either: Rock, Paper or Scissors");
+          if (playerInput === "rock") {
+            playerInput = "Rock";
+          } else if (playerInput === "paper") {
+            playerInput = "Paper";
+          } else if (playerInput === "scissors") {
+            playerInput = "Scissors";
+          } else if (
+            playerInput !== "rock" ||
+            playerInput !== "paper" ||
+            playerInput !== "scissors"
+          ) {
+            return alert("Please choose either: Rock, Paper or Scissors");
+          }
         }
-      }
 
-      // compare and declare result
-        if (computerPlay === playerSelection) {
+        computerPlay();
+        playerSelection();
+
+        // compare and declare result
+        // computerInput is inside function
+        if (computerInput === playerInput) {
           computerPlay = 1;
           playerSelection = 1;
-          alert("It's a tie!");
+          console.log("It's a tie!");
         } else if (
-          (computerPlay === "Rock" && playerSelection === "Scissors") ||
-          (computerPlay === "Paper" && playerSelection === "Rock") ||
-          (computerPlay === "Scissors" && playerSelection === "Paper")
+          (computerInput === "Rock" && playerInput === "Scissors") ||
+          (computerInput === "Paper" && playerInput === "Rock") ||
+          (computerInput === "Scissors" && v === "Paper")
         ) {
           computerPlay = 2;
-          alert("Computer wins!");
+          console.log("Computer wins!");
         } else if (
-          (playerSelection === "Rock" && computerPlay === "Scissors") ||
-          (playerSelection === "Paper" && computerPlay === "Rock") ||
-          (playerSelection === "Scissors" && computerPlay === "Paper")
+          (playerInput === "Rock" && computerInput === "Scissors") ||
+          (playerInput === "Paper" && computerInput === "Rock") ||
+          (playerInput === "Scissors" && computerInput === "Paper")
         ) {
           playerSelection = 2;
-          alert("Player wins!");
+          console.log("Player wins!");
         }
       }
-
-
-
-
     </script>
   </body>
 </html>
