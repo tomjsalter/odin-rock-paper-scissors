@@ -4,74 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
     <title>Rock, Paper, Scissors</title>
   </head>
   <body>
-    <script>
-      // playSingleRound function
-      function playSingleRound() {
-        // computerPlay function
-        function computerPlay() {
-          let numberGenerator;
-          let maxNumber = 3;
-          numberGenerator = Math.floor(Math.random() * maxNumber);
 
-          let computerInput;
-          if (numberGenerator === 0) {
-            computerInput = "Rock";
-          } else if (numberGenerator === 1) {
-            computerInput = "Paper";
-          } else if (numberGenerator === 2) {
-            computerInput = "Scissors";
-          }
-        }
-
-        // playerSelection function
-        function playerSelection() {
-          let playerInput;
-          playerInput = prompt("Rock, Paper or Scissors?");
-          playerInput = playerInput.toLowerCase();
-
-          if (playerInput === "rock") {
-            playerInput = "Rock";
-          } else if (playerInput === "paper") {
-            playerInput = "Paper";
-          } else if (playerInput === "scissors") {
-            playerInput = "Scissors";
-          } else if (
-            playerInput !== "rock" ||
-            playerInput !== "paper" ||
-            playerInput !== "scissors"
-          ) {
-            return alert("Please choose either: Rock, Paper or Scissors");
-          }
-        }
-
-        computerPlay();
-        playerSelection();
-
-        // compare and declare result
-        // computerInput is inside function
-        if (computerInput === playerInput) {
-          computerPlay = 1;
-          playerSelection = 1;
-          console.log("It's a tie!");
-        } else if (
-          (computerInput === "Rock" && playerInput === "Scissors") ||
-          (computerInput === "Paper" && playerInput === "Rock") ||
-          (computerInput === "Scissors" && v === "Paper")
-        ) {
-          computerPlay = 2;
-          console.log("Computer wins!");
-        } else if (
-          (playerInput === "Rock" && computerInput === "Scissors") ||
-          (playerInput === "Paper" && computerInput === "Rock") ||
-          (playerInput === "Scissors" && computerInput === "Paper")
-        ) {
-          playerSelection = 2;
-          console.log("Player wins!");
-        }
-      }
-    </script>
   </body>
 </html>
