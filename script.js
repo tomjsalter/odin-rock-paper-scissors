@@ -13,7 +13,6 @@ function computerPlay() {
   return generateChoice;
 }
 
-
 let playerSelection;
 let computerSelection;
 
@@ -53,28 +52,4 @@ function playRound(playerSelection, computerSelection) {
     return (computerScore++);
   }
 }
-
-// create game function
-function game() {
-  playRound(playerSelection, computerSelection);
-  console.log(playerScore, computerScore);
-  playRound(playerSelection, computerSelection);
-  console.log(playerScore, computerScore);
-  playRound(playerSelection, computerSelection);
-  console.log(playerScore, computerScore);
-  playRound(playerSelection, computerSelection);
-  console.log(playerScore, computerScore);
-  playRound(playerSelection, computerSelection);
-  console.log(playerScore, computerScore);
-  
-  if (playerScore > computerScore ) {
-    console.log(`Player's final score is: ${playerScore}. Computer's final score is: ${computerScore}. Player wins the game!`);
-  } else if (computerScore > playerScore) {
-  console.log(`Player's final score is: ${playerScore}. Computer's final score is: ${computerScore}. Computer wins the game!`);
-  } else if (playerScore === computerScore) {
-    console.log(`Player's final score is: ${playerScore}. Computer's final score is: ${computerScore}. Game is a tie!`);
-  }
-}
-
-
 
