@@ -8,6 +8,31 @@
     <title>Rock, Paper, Scissors</title>
   </head>
   <body>
+    <header class="gametitle">
+      <img class="logo" src="images/logo.svg" alt="Rock, paper, scissors" />
+      <div class="scoreboard"></div>
+    </header>
 
+    <div class="controls">
+      <input class="ctrl-button paper" type="image" alt="paper" src="images/icon-paper.svg">
+      <input class="ctrl-button scissors" type="image" alt="scissors" src="images/icon-scissors.svg">
+      <input class="ctrl-button rock" type="image" alt="rock" src="images/icon-rock.svg">
+    </div>
+
+    <footer class="rules">
+      <p>Rules</p>
+    </footer>
   </body>
 </html>
+
+
+
+<!-- Width/height of input image button
+  the button will only be the same size as the image itself.
+  if button hit area needs to increase, need to use CSS (padding)
+ -->
+
+<!-- Object position and fit of input image button
+  use object-position to adjust positioning of image within input
+  use object-fit to control the image size fits within the frame
+-->
