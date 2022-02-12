@@ -24,6 +24,7 @@ body {
     padding: 15px;
     border: solid 3px hsl(217, 16%, 45%);
     border-radius: 6px;
+    margin-bottom: 60px;
 }
 
 .logo {
@@ -54,3 +55,23 @@ body {
 }
 
 
+/* GAME CONTROLS */
+.ctrl-button {
+    background-color: white;
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+    object-fit: scale-down;
+}
+
+.paper {
+    border: solid 16px hsl(230, 89%, 62%);
+}
+
+.scissors {
+    border: solid 16px  hsl(39, 89%, 49%);
+}
+
+.rock {
+    border: solid 16px hsl(349, 71%, 52%);
+}
