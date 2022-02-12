@@ -6,16 +6,46 @@
 
 body {
     width: 375px;
+    padding: 25px;
     margin: auto;
     font-family: 'Barlow Semi Condensed', sans-serif;
     color: white;
     text-transform: uppercase;
     background: radial-gradient(ellipse at top,hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     background-repeat: no-repeat;
+    font-size: 16px;
 }
 
+/* HEADER */
 .game-title {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: solid 3px hsl(217, 16%, 45%);
+    border-radius: 6px;
+}
+
+.logo {
+    max-width: 85px;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+    color: hsl(229, 64%, 46%);
+    width: 70px;
+    height: 70px;
+}
+
+.score-count {
+    color: hsl(229, 25%, 31%);
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 
