@@ -6,7 +6,7 @@
 
 body {
     width: 375px;
-    /* min-height: 900px; */
+    min-height: 100vh;
     padding: 25px;
     margin: auto;
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -103,14 +103,21 @@ body {
 
 
 /* RULES */
-.game-rules {
+.rulebox {
     display: flex;
     justify-content: center;
-    max-width: 160px;
-    padding: 10px;
+}
+
+.rules-btn {
+    text-transform: uppercase;
     letter-spacing: 3px;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin: auto auto 40px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: white;
+    background: none;
+    padding: 10px;
+    width: 130px;
     border: solid 2px hsl(217, 16%, 45%);
-    border-radius: 6px;
+    border-radius: 8px;
 }
