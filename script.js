@@ -53,3 +53,17 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+const paperBtn = document.querySelector('#paperbtn');
+paperBtn.addEventListener('click', () => {
+  playRound("Paper", computerSelection);
+});
+
+const scissorsBtn = document.querySelector('#scissorsbtn');
+scissorsBtn.addEventListener("click", () => {
+  playRound("Scissors", computerSelection);
+});
+
+const rockBtn = document.querySelector('#rockbtn');
+rockBtn.addEventListener("click", () => {
+  playRound("Rock", computerSelection);
+});

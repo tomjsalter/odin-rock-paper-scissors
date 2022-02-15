@@ -120,4 +120,5 @@ body {
     width: 130px;
     border: solid 2px hsl(217, 16%, 45%);
     border-radius: 8px;
+    cursor: pointer;
 }
