@@ -46,9 +46,9 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+
+
 const bgTriangle = document.querySelector('.game-controls');
-const userPick = document.querySelector('#left-pos');
-const housePick = document.querySelector('#right-post');
 
 const paperBtn = document.querySelector('.ctrl-button.paper');
 paperBtn.addEventListener('click', () => {
