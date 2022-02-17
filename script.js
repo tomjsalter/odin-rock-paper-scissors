@@ -46,55 +46,24 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-const paperBtn = document.querySelector('#paperbtn');
+const bgTriangle = document.querySelector('.game-controls');
+const userPick = document.querySelector('#left-pos');
+const housePick = document.querySelector('#right-post');
+
+const paperBtn = document.querySelector('.ctrl-button.paper');
 paperBtn.addEventListener('click', () => {
   playRound("Paper", computerSelection);
+  bgTriangle.style.background = 'none';
 });
 
-const scissorsBtn = document.querySelector('#scissorsbtn');
+const scissorsBtn = document.querySelector('.ctrl-button.scissors');
 scissorsBtn.addEventListener("click", () => {
   playRound("Scissors", computerSelection);
+  bgTriangle.style.background = "none";
 });
 
-const rockBtn = document.querySelector('#rockbtn');
+const rockBtn = document.querySelector('.ctrl-button.rock');
 rockBtn.addEventListener("click", () => {
   playRound("Rock", computerSelection);
+  bgTriangle.style.background = "none";
 });
-
-
-
-
-
-// // create playRound function
-// function playRound(playerSelection, computerSelection) {
-
-//   let lowerCaseString;
-//   let upperCaseChar;
-//   computerSelection = computerPlay();
-
-//   playerSelection = prompt("Choose Rock, Paper or Scissors?");
-//   upperCaseChar = playerSelection.charAt(0).toUpperCase();
-//   lowerCaseString = playerSelection.substring(1).toLowerCase();
-//   playerSelection = upperCaseChar + lowerCaseString;
-  
-//   console.log(`Player chose: ${playerSelection}.`);
-//   console.log(`Computer chose: ${computerSelection}.`);
-
-//   if (playerSelection === computerSelection) {
-//     console.log("The round is a tie!");
-//   } else if (
-//     (playerSelection === "Rock" && computerSelection === "Scissors") ||
-//     (playerSelection === "Paper" && computerSelection === "Rock") ||
-//     (playerSelection === "Scissors" && computerSelection === "Paper")
-//   ) {
-//     console.log("Player wins round!");
-//     return (playerScore++);
-//   } else if (
-//     (computerSelection === "Rock" && playerSelection === "Scissors") ||
-//     (computerSelection === "Paper" && playerSelection === "Rock") ||
-//     (computerSelection === "Scissors" && playerSelection === "Paper")
-//   ) {
-//     console.log("Computer wins round!");
-//     return (computerScore++);
-//   }
-// }
