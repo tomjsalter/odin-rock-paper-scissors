@@ -19,6 +19,9 @@ let computerSelection;
 let playerScore = 0;
 let computerScore = 0;
 
+
+
+
 // create playRound function
 function playRound(playerSelection, computerSelection) {
 
@@ -47,23 +50,17 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-
-const bgTriangle = document.querySelector('.game-controls');
-
 const paperBtn = document.querySelector('.ctrl-button.paper');
 paperBtn.addEventListener('click', () => {
   playRound("Paper", computerSelection);
-  bgTriangle.style.background = 'none';
 });
 
-const scissorsBtn = document.querySelector('.ctrl-button.scissors');
+const scissorsBtn = document.querySelector('.scissors');
 scissorsBtn.addEventListener("click", () => {
   playRound("Scissors", computerSelection);
-  bgTriangle.style.background = "none";
 });
 
-const rockBtn = document.querySelector('.ctrl-button.rock');
+const rockBtn = document.querySelector('.rock');
 rockBtn.addEventListener("click", () => {
   playRound("Rock", computerSelection);
-  bgTriangle.style.background = "none";
 });
