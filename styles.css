@@ -59,26 +59,14 @@ body {
 /* GAME CONTROLS */
 .game-controls {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    flex-direction: column;
     height: 290px;
     background: url(images/bg-triangle.svg);
     background-repeat: no-repeat;
     background-size: 80% 80%;
     background-position: 50% 100%;
     margin-bottom: 120px;
-}
-
-.ctrl-row1, .ctrl-row2 {
-    display: flex;
-}
-
-.ctrl-row1 {
-    justify-content: space-between;
-}
-
-.ctrl-row2 {
-    justify-content: center;
 }
 
 .ctrl-button {
@@ -99,6 +87,7 @@ body {
 
 .rock {
     border: solid 16px hsl(349, 71%, 52%);
+    margin: auto;
 }
 
 
