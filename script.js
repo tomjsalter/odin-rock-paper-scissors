@@ -22,14 +22,7 @@ let computerScore = 0;
 // create playRound function
 function playRound(playerSelection, computerSelection) {
 
-  let lowerCaseString;
-  let upperCaseChar;
   computerSelection = computerPlay();
-
-  playerSelection = prompt("Choose Rock, Paper or Scissors?");
-  upperCaseChar = playerSelection.charAt(0).toUpperCase();
-  lowerCaseString = playerSelection.substring(1).toLowerCase();
-  playerSelection = upperCaseChar + lowerCaseString;
   
   console.log(`Player chose: ${playerSelection}.`);
   console.log(`Computer chose: ${computerSelection}.`);
@@ -53,3 +46,24 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+
+
+const bgTriangle = document.querySelector('.game-controls');
+
+const paperBtn = document.querySelector('.ctrl-button.paper');
+paperBtn.addEventListener('click', () => {
+  playRound("Paper", computerSelection);
+  bgTriangle.style.background = 'none';
+});
+
+const scissorsBtn = document.querySelector('.ctrl-button.scissors');
+scissorsBtn.addEventListener("click", () => {
+  playRound("Scissors", computerSelection);
+  bgTriangle.style.background = "none";
+});
+
+const rockBtn = document.querySelector('.ctrl-button.rock');
+rockBtn.addEventListener("click", () => {
+  playRound("Rock", computerSelection);
+  bgTriangle.style.background = "none";
+});
