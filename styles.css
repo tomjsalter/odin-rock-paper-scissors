@@ -60,8 +60,11 @@ body {
 .game-controls {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    height: 285px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 50px;
     background: url(images/bg-triangle.svg);
     background-repeat: no-repeat;
     background-size: 80% 80%;
@@ -87,7 +90,6 @@ body {
 
 .rock {
     border: solid 16px hsl(349, 71%, 52%);
-    margin: auto;
 }
 
 
