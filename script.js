@@ -21,7 +21,6 @@ let computerScore = 0;
 
 
 
-
 // create playRound function
 function playRound(playerSelection, computerSelection) {
 
@@ -29,6 +28,7 @@ function playRound(playerSelection, computerSelection) {
   
   console.log(`Player chose: ${playerSelection}.`);
   console.log(`Computer chose: ${computerSelection}.`);
+
 
   if (playerSelection === computerSelection) {
     console.log("The round is a tie!");
