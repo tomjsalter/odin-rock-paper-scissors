@@ -31,20 +31,20 @@ function playRound(playerSelection, computerSelection) {
 
 
   if (playerSelection === computerSelection) {
-    console.log("The round is a tie!");
+    roundScore.textContent = "The round is a tie!";
   } else if (
     (playerSelection === "Rock" && computerSelection === "Scissors") ||
     (playerSelection === "Paper" && computerSelection === "Rock") ||
     (playerSelection === "Scissors" && computerSelection === "Paper")
   ) {
-    console.log("User wins round!");
+    roundScore.textContent = "User wins round!";
     return (playerScore++);
   } else if (
     (computerSelection === "Rock" && playerSelection === "Scissors") ||
     (computerSelection === "Paper" && playerSelection === "Rock") ||
     (computerSelection === "Scissors" && playerSelection === "Paper")
   ) {
-    console.log("House wins round!");
+    roundScore.textContent = "House wins round!";
     return (computerScore++);
   }
 }
@@ -65,6 +65,8 @@ rockBtn.addEventListener("click", () => {
   playRound("Rock", computerSelection);
 });
 
+
+// display score of each round
 const bodyContainer = document.querySelector('body');
 
 const roundScore = document.createElement('div');
