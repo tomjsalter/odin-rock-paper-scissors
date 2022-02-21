@@ -21,30 +21,30 @@ let computerScore = 0;
 
 
 
-
 // create playRound function
 function playRound(playerSelection, computerSelection) {
 
   computerSelection = computerPlay();
   
-  console.log(`Player chose: ${playerSelection}.`);
-  console.log(`Computer chose: ${computerSelection}.`);
+  console.log(`User picked: ${playerSelection}.`);
+  console.log(`House picked: ${computerSelection}.`);
+
 
   if (playerSelection === computerSelection) {
-    console.log("The round is a tie!");
+    roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. Round is a tie!`;
   } else if (
     (playerSelection === "Rock" && computerSelection === "Scissors") ||
     (playerSelection === "Paper" && computerSelection === "Rock") ||
     (playerSelection === "Scissors" && computerSelection === "Paper")
   ) {
-    console.log("Player wins round!");
+    roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. User wins round!`;
     return (playerScore++);
   } else if (
     (computerSelection === "Rock" && playerSelection === "Scissors") ||
     (computerSelection === "Paper" && playerSelection === "Rock") ||
     (computerSelection === "Scissors" && playerSelection === "Paper")
   ) {
-    console.log("Computer wins round!");
+    roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. House wins round!`;
     return (computerScore++);
   }
 }
@@ -64,3 +64,10 @@ const rockBtn = document.querySelector('.rock');
 rockBtn.addEventListener("click", () => {
   playRound("Rock", computerSelection);
 });
+
+
+// display score of each round
+const bodyContainer = document.querySelector('body');
+const roundScore = document.createElement('div');
+roundScore.classList.add('roundScoreBox');
+bodyContainer.appendChild(roundScore);

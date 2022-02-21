@@ -25,7 +25,7 @@ body {
     padding: 15px;
     border: solid 3px hsl(217, 16%, 45%);
     border-radius: 6px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .logo {
@@ -45,8 +45,7 @@ body {
 }
 
 .score-title {
-    font-size: 0.65rem;
-    letter-spacing: 1.5px;
+    font-size: 0.8rem;
 }
 
 .score-count {
@@ -69,7 +68,7 @@ body {
     background-repeat: no-repeat;
     background-size: 80% 80%;
     background-position: 50% 100%;
-    margin-bottom: 120px;
+    margin-bottom: 80px;
 }
 
 .ctrl-button {
@@ -93,23 +92,16 @@ body {
 }
 
 
-/* RULES */
-.rulebox {
+/* ROUND SCORE */
+.roundScoreBox {
     display: flex;
     justify-content: center;
-}
-
-.rules-btn {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 1.1rem;
+    align-items: center;
+    font-size: 1.4rem;
     font-weight: 600;
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    color: white;
-    background: none;
-    padding: 10px;
-    width: 130px;
-    border: solid 2px hsl(217, 16%, 45%);
-    border-radius: 8px;
-    cursor: pointer;
+    text-align: center;
+    letter-spacing: 1.5px;
+    padding: 15px;
+    border: solid 3px hsl(217, 16%, 45%);
+    border-radius: 6px;
 }
