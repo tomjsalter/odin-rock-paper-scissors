@@ -71,3 +71,7 @@ const bodyContainer = document.querySelector('body');
 const roundScore = document.createElement('div');
 roundScore.classList.add('roundScoreBox');
 bodyContainer.appendChild(roundScore);
+
+// update scoreboard
+const userScore = document.querySelector('.user.score-count');
+userScore.textContent = "5";

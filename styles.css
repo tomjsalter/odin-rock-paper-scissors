@@ -105,3 +105,9 @@ body {
     border: solid 3px hsl(217, 16%, 45%);
     border-radius: 6px;
 }
+
+.points {
+    color: hsl(229, 25%, 31%);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
