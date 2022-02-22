@@ -71,3 +71,10 @@ const bodyContainer = document.querySelector('body');
 const roundScore = document.createElement('div');
 roundScore.classList.add('roundScoreBox');
 bodyContainer.appendChild(roundScore);
+
+// update scoreboard
+const userScore = document.querySelector('.user.score-count');
+userScore.textContent = 0;
+
+const houseScore = document.querySelector('.house.score-count');
+houseScore.textContent = 0;
