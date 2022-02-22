@@ -74,4 +74,7 @@ bodyContainer.appendChild(roundScore);
 
 // update scoreboard
 const userScore = document.querySelector('.user.score-count');
-userScore.textContent = "5";
+userScore.textContent = 0;
+
+const houseScore = document.querySelector('.house.score-count');
+houseScore.textContent = 0;
