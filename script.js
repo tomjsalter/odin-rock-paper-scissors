@@ -19,16 +19,12 @@ let computerSelection;
 let playerScore = 0;
 let computerScore = 0;
 
-
-
 // create playRound function
 function playRound(playerSelection, computerSelection) {
-
   computerSelection = computerPlay();
-  
+
   console.log(`User picked: ${playerSelection}.`);
   console.log(`House picked: ${computerSelection}.`);
-
 
   if (playerSelection === computerSelection) {
     roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. Round is a tie!`;
@@ -38,45 +34,44 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection === "Scissors" && computerSelection === "Paper")
   ) {
     roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. User wins round!`;
-    userScore.textContent = parseInt(userScore.textContent) + 1;
-    console.log(userScore);
+    return userScore.textContent = parseInt(userScore.textContent) + 1;
   } else if (
     (computerSelection === "Rock" && playerSelection === "Scissors") ||
     (computerSelection === "Paper" && playerSelection === "Rock") ||
     (computerSelection === "Scissors" && playerSelection === "Paper")
   ) {
     roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. House wins round!`;
-    houseScore.textContent = parseInt(houseScore.textContent) + 1;
-    console.log(houseScore);
+    return houseScore.textContent = parseInt(houseScore.textContent) + 1;
   }
 }
 
-
-const paperBtn = document.querySelector('.ctrl-button.paper');
-paperBtn.addEventListener('click', () => {
+// player button choice
+const paperBtn = document.querySelector(".paper");
+paperBtn.addEventListener("click", () => {
   playRound("Paper", computerSelection);
+  bodyContainer.appendChild(roundScore);
 });
 
-const scissorsBtn = document.querySelector('.scissors');
+const scissorsBtn = document.querySelector(".scissors");
 scissorsBtn.addEventListener("click", () => {
   playRound("Scissors", computerSelection);
+  bodyContainer.appendChild(roundScore);
 });
 
-const rockBtn = document.querySelector('.rock');
+const rockBtn = document.querySelector(".rock");
 rockBtn.addEventListener("click", () => {
   playRound("Rock", computerSelection);
+  bodyContainer.appendChild(roundScore);
 });
 
-
 // display score of each round
-const bodyContainer = document.querySelector('body');
-const roundScore = document.createElement('div');
-roundScore.classList.add('roundScoreBox');
-bodyContainer.appendChild(roundScore);
+const bodyContainer = document.querySelector("body");
+const roundScore = document.createElement("div");
+roundScore.classList.add("roundScoreBox");
 
 // update scoreboard
-let userScore = document.querySelector('.user.score-count');
+let userScore = document.querySelector(".user.score-count");
 userScore.textContent = 0;
 
-let houseScore = document.querySelector('.house.score-count');
+let houseScore = document.querySelector(".house.score-count");
 houseScore.textContent = 0;
