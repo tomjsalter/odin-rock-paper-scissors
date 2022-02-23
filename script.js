@@ -38,14 +38,16 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection === "Scissors" && computerSelection === "Paper")
   ) {
     roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. User wins round!`;
-    return (playerScore++);
+    userScore.textContent = parseInt(userScore.textContent) + 1;
+    console.log(userScore);
   } else if (
     (computerSelection === "Rock" && playerSelection === "Scissors") ||
     (computerSelection === "Paper" && playerSelection === "Rock") ||
     (computerSelection === "Scissors" && playerSelection === "Paper")
   ) {
     roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. House wins round!`;
-    return (computerScore++);
+    houseScore.textContent = parseInt(houseScore.textContent) + 1;
+    console.log(houseScore);
   }
 }
 
@@ -73,8 +75,8 @@ roundScore.classList.add('roundScoreBox');
 bodyContainer.appendChild(roundScore);
 
 // update scoreboard
-const userScore = document.querySelector('.user.score-count');
+let userScore = document.querySelector('.user.score-count');
 userScore.textContent = 0;
 
-const houseScore = document.querySelector('.house.score-count');
+let houseScore = document.querySelector('.house.score-count');
 houseScore.textContent = 0;
