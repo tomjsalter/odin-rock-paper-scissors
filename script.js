@@ -33,10 +33,9 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection === "Paper" && computerSelection === "Rock") ||
     (playerSelection === "Scissors" && computerSelection === "Paper")
   ) {
-    if (userScore.textContent < "5") {
-      roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. User wins round!`;
-      return userScore.textContent = parseInt(userScore.textContent) + 1;
-    } else if (userScore.textContent === "5") {
+    roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. User wins round!`;
+    userScore.textContent = parseInt(userScore.textContent) + 1;
+    if (userScore.textContent === "5") {
       roundScore.textContent = "User wins the game!";
     }
   } else if (
@@ -44,17 +43,18 @@ function playRound(playerSelection, computerSelection) {
     (computerSelection === "Paper" && playerSelection === "Rock") ||
     (computerSelection === "Scissors" && playerSelection === "Paper")
   ) {
-    if (houseScore.textContent < "5") {
-      roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. House wins round!`;
-      return houseScore.textContent = parseInt(houseScore.textContent) + 1;
-    } else if (houseScore.textContent === "5") {
+    roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. House wins round!`;
+    houseScore.textContent = parseInt(houseScore.textContent) + 1;
+    if (houseScore.textContent === "5") {
       roundScore.textContent = "House wins the game!";
     }
   }
 }
 
-// target game controls to turn off after a game is won
 
+
+// target game controls to turn off after a game is won
+const gameControls = document.querySelector(".game-controls");
 
 // player button choice
 const paperBtn = document.querySelector(".paper");
