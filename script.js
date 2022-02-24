@@ -37,6 +37,7 @@ function playRound(playerSelection, computerSelection) {
     userScore.textContent = parseInt(userScore.textContent) + 1;
     if (userScore.textContent === "5") {
       roundScore.textContent = "User wins the game!";
+      gameControls.style.display = "none";
     }
   } else if (
     (computerSelection === "Rock" && playerSelection === "Scissors") ||
@@ -47,10 +48,13 @@ function playRound(playerSelection, computerSelection) {
     houseScore.textContent = parseInt(houseScore.textContent) + 1;
     if (houseScore.textContent === "5") {
       roundScore.textContent = "House wins the game!";
+      gameControls.style.display = "none";
     }
   }
 }
 
+// replay button
+const replayGame = document.createElement("button");
 
 
 // target game controls to turn off after a game is won
