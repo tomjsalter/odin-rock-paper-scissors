@@ -53,8 +53,7 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-// replay button
-const replayGame = document.createElement("button");
+
 
 
 // target game controls to turn off after a game is won
@@ -91,3 +90,11 @@ userScore.textContent = 0;
 let houseScore = document.querySelector(".house.score-count");
 houseScore.textContent = 0;
 
+// replay button
+const replayButton = document.createElement("button");
+replayButton.textContent = "Play again!";
+replayButton.classList.add("replayBtnStyle");
+replayButton.addEventListener("click", () => {
+  gameControls.style.display = "flex";
+})
+bodyContainer.appendChild(replayButton);
