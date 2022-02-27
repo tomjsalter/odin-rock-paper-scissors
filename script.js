@@ -96,5 +96,7 @@ replayButton.textContent = "Play again!";
 replayButton.classList.add("replayBtnStyle");
 replayButton.addEventListener("click", () => {
   gameControls.style.display = "flex";
-})
-bodyContainer.appendChild(replayButton);
+  houseScore.textContent = 0;
+  userScore.textContent = 0;
+  roundScore.style.display = "none";
+});

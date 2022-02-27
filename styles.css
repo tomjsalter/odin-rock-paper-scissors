@@ -121,3 +121,7 @@ body {
     padding: 15px;
     background: none;
 }
+
+.replayBtnStyle:hover {
+    cursor: pointer;
+}
