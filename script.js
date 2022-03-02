@@ -1,3 +1,16 @@
+
+let playerSelection;
+let computerSelection;
+
+let playerScore = 0;
+let computerScore = 0;
+
+const bodyContainer = document.querySelector("body");
+const roundScore = document.createElement("div");
+roundScore.classList.add("roundScoreBox");
+const gameControls = document.querySelector(".game-controls");
+
+
 // create computerPlay function
 function computerPlay() {
   let generateChoice;
@@ -13,11 +26,6 @@ function computerPlay() {
   return generateChoice;
 }
 
-let playerSelection;
-let computerSelection;
-
-let playerScore = 0;
-let computerScore = 0;
 
 // create playRound function
 function playRound(playerSelection, computerSelection) {
@@ -54,9 +62,6 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-// target game controls to turn off after a game is won
-const gameControls = document.querySelector(".game-controls");
-
 // player button choice
 const paperBtn = document.querySelector(".paper");
 paperBtn.addEventListener("click", () => {
@@ -78,11 +83,6 @@ rockBtn.addEventListener("click", () => {
   bodyContainer.appendChild(roundScore);
   roundScore.style.display = "flex";
 });
-
-// display score of each round
-const bodyContainer = document.querySelector("body");
-const roundScore = document.createElement("div");
-roundScore.classList.add("roundScoreBox");
 
 // update scoreboard
 let userScore = document.querySelector(".user.score-count");
