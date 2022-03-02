@@ -66,6 +66,9 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+
+const buttonClick = document.querySelectorAll(".ctrl-button");
+
 paperBtn.addEventListener("click", () => {
   playRound("Paper", computerSelection);
   bodyContainer.appendChild(roundScore);
