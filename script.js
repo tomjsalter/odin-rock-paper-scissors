@@ -62,18 +62,21 @@ const paperBtn = document.querySelector(".paper");
 paperBtn.addEventListener("click", () => {
   playRound("Paper", computerSelection);
   bodyContainer.appendChild(roundScore);
+  roundScore.style.display = "flex";
 });
 
 const scissorsBtn = document.querySelector(".scissors");
 scissorsBtn.addEventListener("click", () => {
   playRound("Scissors", computerSelection);
   bodyContainer.appendChild(roundScore);
+  roundScore.style.display = "flex";
 });
 
 const rockBtn = document.querySelector(".rock");
 rockBtn.addEventListener("click", () => {
   playRound("Rock", computerSelection);
   bodyContainer.appendChild(roundScore);
+  roundScore.style.display = "flex";
 });
 
 // display score of each round
@@ -98,4 +101,5 @@ replayButton.addEventListener("click", () => {
   gameControls.style.display = "flex";
   houseScore.textContent = 0;
   userScore.textContent = 0;
+  roundScore.style.display = "none";
 });
