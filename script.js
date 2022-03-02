@@ -10,8 +10,15 @@ const roundScore = document.createElement("div");
 roundScore.classList.add("roundScoreBox");
 const gameControls = document.querySelector(".game-controls");
 
+const paperBtn = document.querySelector(".paper");
+const scissorsBtn = document.querySelector(".scissors");
+const rockBtn = document.querySelector(".rock");
 
-// create computerPlay function
+let userScore = document.querySelector(".user.score-count");
+let houseScore = document.querySelector(".house.score-count");
+
+const replayButton = document.createElement("button");
+
 function computerPlay() {
   let generateChoice;
   generateChoice = Math.floor(Math.random() * 3);
@@ -26,8 +33,6 @@ function computerPlay() {
   return generateChoice;
 }
 
-
-// create playRound function
 function playRound(playerSelection, computerSelection) {
   computerSelection = computerPlay();
 
@@ -61,38 +66,27 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-
-// player button choice
-const paperBtn = document.querySelector(".paper");
 paperBtn.addEventListener("click", () => {
   playRound("Paper", computerSelection);
   bodyContainer.appendChild(roundScore);
   roundScore.style.display = "flex";
 });
 
-const scissorsBtn = document.querySelector(".scissors");
 scissorsBtn.addEventListener("click", () => {
   playRound("Scissors", computerSelection);
   bodyContainer.appendChild(roundScore);
   roundScore.style.display = "flex";
 });
 
-const rockBtn = document.querySelector(".rock");
 rockBtn.addEventListener("click", () => {
   playRound("Rock", computerSelection);
   bodyContainer.appendChild(roundScore);
   roundScore.style.display = "flex";
 });
 
-// update scoreboard
-let userScore = document.querySelector(".user.score-count");
 userScore.textContent = 0;
-
-let houseScore = document.querySelector(".house.score-count");
 houseScore.textContent = 0;
 
-// replay button
-const replayButton = document.createElement("button");
 replayButton.textContent = "Restart";
 replayButton.classList.add("replayBtnStyle");
 bodyContainer.insertBefore(replayButton, gameControls);
