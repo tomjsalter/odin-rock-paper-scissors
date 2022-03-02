@@ -10,6 +10,7 @@ const roundScore = document.createElement("div");
 roundScore.classList.add("roundScoreBox");
 const gameControls = document.querySelector(".game-controls");
 
+const buttonClick = document.querySelectorAll(".ctrl-button");
 const paperBtn = document.querySelector(".paper");
 const scissorsBtn = document.querySelector(".scissors");
 const rockBtn = document.querySelector(".rock");
@@ -33,7 +34,7 @@ function computerPlay() {
   return generateChoice;
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection) {
   computerSelection = computerPlay();
 
   console.log(`User picked: ${playerSelection}.`);
@@ -67,22 +68,21 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-const buttonClick = document.querySelectorAll(".ctrl-button");
 
 paperBtn.addEventListener("click", () => {
-  playRound("Paper", computerSelection);
+  playRound("Paper");
   bodyContainer.appendChild(roundScore);
   roundScore.style.display = "flex";
 });
 
 scissorsBtn.addEventListener("click", () => {
-  playRound("Scissors", computerSelection);
+  playRound("Scissors");
   bodyContainer.appendChild(roundScore);
   roundScore.style.display = "flex";
 });
 
 rockBtn.addEventListener("click", () => {
-  playRound("Rock", computerSelection);
+  playRound("Rock");
   bodyContainer.appendChild(roundScore);
   roundScore.style.display = "flex";
 });
