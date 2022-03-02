@@ -67,8 +67,6 @@ function playRound(playerSelection) {
   }
 }
 
-
-
 paperBtn.addEventListener("click", () => {
   playRound("Paper");
   bodyContainer.appendChild(roundScore);
