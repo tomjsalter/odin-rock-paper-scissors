@@ -42,6 +42,8 @@ function playRound(playerSelection) {
 
   if (playerSelection === computerSelection) {
     roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. Round is a tie!`;
+    bodyContainer.appendChild(roundScore);
+    roundScore.style.display = "flex";
   } else if (
     (playerSelection === "Rock" && computerSelection === "Scissors") ||
     (playerSelection === "Paper" && computerSelection === "Rock") ||
@@ -49,6 +51,8 @@ function playRound(playerSelection) {
   ) {
     roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. User wins round!`;
     userScore.textContent = parseInt(userScore.textContent) + 1;
+    bodyContainer.appendChild(roundScore);
+    roundScore.style.display = "flex";
     if (userScore.textContent === "5") {
       roundScore.textContent = "User wins the game!";
       gameControls.style.display = "none";
@@ -60,6 +64,8 @@ function playRound(playerSelection) {
   ) {
     roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. House wins round!`;
     houseScore.textContent = parseInt(houseScore.textContent) + 1;
+    bodyContainer.appendChild(roundScore);
+    roundScore.style.display = "flex";
     if (houseScore.textContent === "5") {
       roundScore.textContent = "House wins the game!";
       gameControls.style.display = "none";
@@ -69,20 +75,14 @@ function playRound(playerSelection) {
 
 paperBtn.addEventListener("click", () => {
   playRound("Paper");
-  bodyContainer.appendChild(roundScore);
-  roundScore.style.display = "flex";
 });
 
 scissorsBtn.addEventListener("click", () => {
   playRound("Scissors");
-  bodyContainer.appendChild(roundScore);
-  roundScore.style.display = "flex";
 });
 
 rockBtn.addEventListener("click", () => {
   playRound("Rock");
-  bodyContainer.appendChild(roundScore);
-  roundScore.style.display = "flex";
 });
 
 userScore.textContent = 0;
