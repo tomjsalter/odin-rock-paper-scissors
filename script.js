@@ -1,4 +1,3 @@
-
 let playerSelection;
 let computerSelection;
 
@@ -20,18 +19,14 @@ let houseScore = document.querySelector(".house.score-count");
 
 const replayButton = document.createElement("button");
 
-function computerPlay() {
-  let generateChoice;
-  generateChoice = Math.floor(Math.random() * 3);
+const choice = {
+  0: "Rock",
+  1: "Paper",
+  2: "Scissors"
+};
 
-  if (generateChoice === 0) {
-    generateChoice = "Rock";
-  } else if (generateChoice === 1) {
-    generateChoice = "Paper";
-  } else if (generateChoice === 2) {
-    generateChoice = "Scissors";
-  }
-  return generateChoice;
+function computerPlay() {
+  return choice[Math.floor(Math.random() * 3)];
 }
 
 function playRound(playerSelection) {
@@ -45,7 +40,6 @@ function playRound(playerSelection) {
 
   if (playerSelection === computerSelection) {
     roundScore.textContent = `Player picked: ${playerSelection}. House picked: ${computerSelection}. Round is a tie!`;
-    
   } else if (
     (playerSelection === "Rock" && computerSelection === "Scissors") ||
     (playerSelection === "Paper" && computerSelection === "Rock") ||
